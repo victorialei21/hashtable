@@ -2,20 +2,20 @@
 
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-  try
-  {
-  } //end try blcok
-  catch (NoSuchKey &e)
-  {
-  }
-  catch (DuplicateKey &e)
-  {
-  }
-  catch (...)
-  {
-  }
+int main(int argc, char *argv[]) {
+    try {
+        Polynomial<string> sample;
+        long long hashcode = sample("a");
 
-  return 0;
-} //end main
+        Hashtable<string, short, Polynomial<string>> ht1;
+
+        cout << hashcode << endl;
+
+    }  //end try blcok
+    catch (NoSuchKey &e) {
+    } catch (DuplicateKey &e) {
+    } catch (...) {
+    }
+
+    return 0;
+}  //end main

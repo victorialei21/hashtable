@@ -3,10 +3,10 @@
 
 #include <iostream>
 
-#include "polynomial.h"
+#include "exceptions.h"
 #include "hashtable.h"
 #include "node.h"
-#include "exceptions.h"
+#include "polynomial.h"
 
 using namespace std;
 
