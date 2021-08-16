@@ -27,35 +27,46 @@ class Node {
 
 template <typename K, typename V>
 Node<K, V>::Node(const K &k, const V &v, const long long &hash) {
-  
+    this->key = k;
+    this->value = v;
+    this->h = hash;
+    this->nextPtr = setNext(nullptr);
+    this->prevPtr = setPrev(nullptr);
 }
 
 template <typename K, typename V>
 void Node<K, V>::setHash(const long long &hash) {
+    this->h = hash;
 }
 
 template <typename K, typename V>
 void Node<K, V>::setValue(const V &value) {
+    this->v = value;
 }
 
 template <typename K, typename V>
 K &Node<K, V>::getKey() {
+    return this->key;
 }
 
 template <typename K, typename V>
 V &Node<K, V>::getValue() {
+    return this->value;
 }
 
 template <typename K, typename V>
 long long &Node<K, V>::getH() {
+    return this->h;
 }
 
 template <typename K, typename V>
 void Node<K, V>::setNext(Node<K, V> *next) {
+    this->nextPtr = next;
 }
 
 template <typename K, typename V>
 void Node<K, V>::setPrev(Node<K, V> *prev) {
+    this->prevPtr = prev;
 }
 
 template <typename K, typename V>
